@@ -1,0 +1,102 @@
+{include file='header.phtml' section='inventory'}
+<script type="text/javascript" src="/js/libs/jquery.jeditable.min.js"></script>
+<script type="text/javascript" src="/js/inventory.js"></script>
+<div id="accordion">
+	<p id="accordion-view-items"><a href="#">View Inventory by Item</a></p>
+	<div>
+		<table class="report">
+			<thead>
+			<tr>
+				<th>Item Code</th>
+				<th>Item Name</th>
+				<th class="textright">Qty in Stock</th>
+				<th class="textright">Unit Price</th>
+			</tr>
+			</thead>
+			<tfoot>
+			</tfoot>
+			<tbody>
+			{foreach from=$items item=item}
+			<tr>
+				<td>{$item->itemCode|escape}</td>
+				<td><span class="editname"
+						id="name_{$item->itemCode|escape}">{$item->name|escape}</span></td>
+				<td class="textright">{$item->qty|escape}</td>
+				<td class="textright"><span class="editprice"
+						id="{$item->itemCode|escape}">{$item->sUPrice|escape|string_format:'%.2f'}</span>
+				</td>
+			</tr>
+			{/foreach}
+			</tbody>
+		</table>
+	</div>
+	<p id="accordion-view-vendors"><a href="#">View Inventory by Vendor</a></p>
+	<div id="accordion-view-vendors-div">
+		<table class="group">
+			<tr>
+				<td>
+				{foreach from=$vendors item=vendor}
+				<img src="/images/refresh.png" class="link" id="refresh-{$vendor->vid}" title="Refresh Item List" />
+				<span class="vendor-title">{$vendor->name|escape}</span><br />
+					<div id="item-list-vendor-{$vendor->vid}" style="display:none" class="toggle">
+						<table class="report">
+							<thead>
+							<tr>
+								<th>Item Code</th>
+								<th>Item Name</th>
+								<th class="textright">Qty in Stock</th>
+								<th class="textright">Vendor Unit Price</th>
+								<th class="textright">Store Unit Price</th>
+							</tr>
+							</thead>
+							<tfoot>
+							</tfoot>
+							<tbody id="tbody-{$vendor->vid}">
+							{foreach from=$vendor->suppliedItems item=item}
+							<tr>
+								<td>{$item->itemCode|escape}</td>
+								<td>{$item->name|escape}</td>
+								<td class="textright">{$item->qty|escape}</td>
+								<td class="textright">${$item->vUPrice|escape|string_format:'%.2f'}</td>
+								<td class="textright">${$item->sUPrice|escape|string_format:'%.2f'}</td>
+							</tr>
+							{/foreach}
+							</tbody>
+						</table>
+					</div><br />
+				{/foreach}
+				</td>
+			</tr>
+		</table>
+	</div>
+	<p><a href="#">Search Item</a></p>
+	<div>
+		<form>
+		<div class="columns">
+			<div class="column1 report">
+				<div class="row">
+					Keyword:<br />
+					<input type="text" class="input" name="keyword" id="keyword" />
+				</div>
+			</div>
+			<div class="column2 report">
+				<div class="row">
+					Search by:<br />
+					<select name="criteria" id="criteria">
+						<option value="1">Item Code</option>
+						<option value="2">Item Name</option>
+					</select>
+				</div>
+			</div>
+			<div class="column3">
+				<br />
+				<input type="submit" class="input submit" value="Search" id="search" />
+			</div>
+		</div>
+		<div class="clear"></div>
+		<br />
+		<div id="search-result" style="display:none"></div>
+		</form>
+	</div>
+</div><!-- END accordion -->
+{include file='footer.phtml'}

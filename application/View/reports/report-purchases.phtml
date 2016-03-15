@@ -1,0 +1,54 @@
+{if isset($errors)}
+<div class="error">
+	<ul>
+	{foreach from=$errors item=err}
+		<li>{$err}</li>
+	{/foreach}
+	</ul>
+</div>
+{elseif $records|@count}
+<br />
+<div id="result-purchases">
+	<div class="columns">
+		<div class="column1"><strong>Total Purchases Report</strong></div>
+		<div class="column2"><strong>Period:</strong> {$fromDate->toString('MMM dd, yyyy')} &mdash; {$toDate->toString('MMM dd, yyyy')}</div>
+	</div>
+	<div class="clear"></div>
+	<table class="report">
+		<thead>
+		<tr>
+			<th>Item Code</th>
+			<th>Item Name</th>
+			<th class="textright">Qty</th>
+			<th class="textright">Final Price</th>
+		</tr>
+		</thead>
+		<tfoot>
+			<tr>
+				<td colspan="3" class="textright">Sub-total:</td>
+				<td class="textright">${$subtotal|string_format:'%.2f'}</td>
+			</tr>
+			<tr>
+				<td colspan="3" class="textright">Tax (%):</td>
+				<td class="textright">{$tax|string_format:'%.2f'}</td>
+			</tr>
+			<tr>
+				<td colspan="3" class="textright">Total:</td>
+				<td class="textright">${$total|string_format:'%.2f'}</td>
+			</tr>
+		</tfoot>
+		<tbody>
+			{foreach from=$records item=row}
+			<tr>
+				<td>{$row->item_code|escape}</td>
+				<td>{$row->iname|escape}</td>
+				<td class="textright">{$row->sum_qty}</td>
+				<td class="textright">${$row->final_price|string_format:'%.2f'}</td>
+			</tr>
+			{/foreach}
+		</tbody>
+	</table>
+</div><!-- END result purchases -->
+{else}
+<p><strong>No purchases within the given period.</strong></p>
+{/if}

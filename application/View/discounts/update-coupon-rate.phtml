@@ -1,0 +1,5 @@
+{if !$ok && isset($msg)}
+{$msg}
+{else}
+{$rate|string_format:'%.2f'}
+{/if}

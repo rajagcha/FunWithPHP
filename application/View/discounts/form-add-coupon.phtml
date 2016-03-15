@@ -1,0 +1,31 @@
+<form id="form-add-coupon" class="add-coupon">
+	<div class="error" style="display:none" id="coupon-error-box">
+		<strong>There is an error with submitted data.</strong>
+		<ul>
+		</ul>
+	</div>
+	<div class="row">
+		<label for="coupon-code">Coupon code:</label>
+		<input type="text" class="input" name="coupon_code" id="coupon-code" />
+	</div>
+	<div class="row">
+		<label for="item-code">Item code:</label>
+		<select name="item_code" id="item-code">
+			{foreach from=$itemCodes item=code}
+			<option value="{$code|escape}">{$code|escape}</option>
+			{/foreach}
+		</select>
+	</div>
+	<div class="row">
+		<label for="rate">Discount rate (%):</label>
+		<input type="text" class="input short" name="rate" id="rate" />
+	</div>
+	<div class="row">
+		<label for="from-date">Available from:</label>
+		<input type="text" class="input" name="from_date" id="from-date" readonly="readonly" />
+	</div>
+	<div class="row">
+		<label for="to-date">To:</label>
+		<input type="text" class="input" name="to_date" id="to-date" readonly="readonly" />
+	</div>
+</form>

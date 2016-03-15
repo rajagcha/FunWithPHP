@@ -1,0 +1,118 @@
+{include file='header.phtml' section='purchases'}
+<script type="text/javascript" src="/js/libs/jquery.jeditable.min.js"></script>
+<script type="text/javascript">
+var vendors = new Array();
+{foreach from=$vendors item=vendor}
+	var items = new Array();
+	{foreach from=$vendor->suppliedItems item=item}
+		items.push("{$item->itemCode|escape}");
+	{/foreach}
+	vendors[{$vendor->vid}] = items;
+{/foreach}
+</script>
+<script type="text/javascript" src="/js/purchases.js"></script>
+<div id="accordion">
+	<p><a href="#"><strong>Place Order</strong></a></p>
+	<div>
+		<div class="error" style="display:none" id="error-box">
+			<strong>There is an error with submitted data.</strong>
+			<ul>
+			</ul>
+		</div>
+		<form id="form-place-order">
+			<div class="columns">
+				<div class="column1">
+					<div class="row">
+						Date:<br />
+						<input type="text" id="bill-date" readonly="readonly" name="date" />
+					</div>
+				</div>
+				<div class="column2">
+					<div class="row">
+						Vendor:<br />
+						<select name="vendor" id="vendor-id">
+							{foreach from=$vendors item=vendor}
+							<option value="{$vendor->vid}">{$vendor->name|escape}</option>
+							{/foreach}
+						</select>
+					</div>
+				</div>
+			</div>
+			<div class="clear"></div>
+			<table class="report">
+				<thead>
+					<tr>
+						<th><img id="add-item" src="/images/item_add.png" title="Add new item to bill" class="link" /></th>
+						<th>Item Code</th>
+						<th>Qty</th>
+						<th class="textright">Unit Price</th>
+						<th class="textright">Final Price</th>
+					</tr>
+				</thead>
+				<tfoot>
+					<tr>
+						<td colspan="4" class="textright">Sub-total:</td>
+						<td class="textright"><span id="sub-total">0.00</span></td>
+					</tr>
+					<tr>
+						<td colspan="4" class="textright">Tax (%):</td>
+						<td class="textright">
+							<input class="input short fromright" type="text" readonly="readonly" name="tax" value="5.5" id="tax" />
+						</td>
+					</tr>
+					<tr>
+						<td colspan="4" class="textright">Total:</td>
+						<td class="textright" id="total"><span id="total">0.00</span></td>
+					</tr>
+					<tr>
+						<td colspan="5" class="textright">
+							<input type="reset" class="input submit" value="Reset Form" id="reset-form" />
+							<input type="button" class="input submit" value="Place Order" id="submit" />
+						</td>
+					</tr>
+				</tfoot>
+				<tbody id="item-list">
+				</tbody>
+			</table>
+			<!-- info dialog -->
+			<div id="bill-message" title="Confirmation">
+				<p><span class="ui-icon ui-icon-circle-check" style="float:left; margin:0 7px 50px 0;"></span>The order has been placed.</p>
+			</div>
+		</form>
+	</div>
+	<p><a href="#"><strong>View Received Orders</strong></a></p>
+	<div>
+		<form id="form-view-received-orders">
+		<div class="columns">
+			<div class="column1 report">
+				From:<br />
+				<input type="text" class="input" name="from_date" id="date-from" readonly="readonly" />
+			</div>
+			<div class="column2 report">
+				To:<br />
+				<input type="text" class="input" name="to_date" id="date-to" readonly="readonly" />
+			</div>
+			<div class="column3">
+				<br /><input type="submit" class="input submit" value="Show" id="button" />
+			</div>
+		</div>
+		</form>
+		<div class="clear"><br /></div>
+		<div id="result-sales-management"></div>
+	</div>
+	<p><a href="#"><strong>View Pending Orders</strong></a></p>
+	<div>
+		{if $pendingPurchases|@count}
+		<div id="pending-orders">
+			{include file='purchases/pending-purchases.phtml' purchases=$pendingPurchases}
+		</div>
+		{else}
+		<p><strong>No pending orders.</strong></p>
+		{/if}
+		<div id="receive-order-error" title="Error">
+			<div class="error"><strong id="error-msg"></strong></div>
+		</div>
+	</div>
+</div><!-- END accordion -->
+<div class="clear"></div>
+{include file='footer.phtml'}

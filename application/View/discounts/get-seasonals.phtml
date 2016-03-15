@@ -1,0 +1,72 @@
+<table class="report">
+	<thead>
+		<tr>
+			<th> </th>
+			<th>Name</th>
+			<th class="textright">Rate (%)</th>
+			<th>From</th>
+			<th>To</th>
+			<th>Status</th>
+		</tr>
+	</thead>
+	<tfoot></tfoot>
+	<tbody id="tbody-seasonal">
+		{foreach from=$seasonals item=seasonal}
+		<tr class="seasonal-{$seasonal->sid}">
+			<td abbr="removeseasonal">{if $seasonal->isRemovable()}
+				<img src="/images/item_remove.png" title="Remove this seasonal discount" class="link" />
+				{/if}
+			</td>
+			<td abbr="showhide"><img src="/images/updown1.png" class="link" title="Show/Hide item list" /> 
+				{if $seasonal->isEditable()}
+				<span class="editseasonalname">{$seasonal->name|escape}</span>
+				{else}
+				{$seasonal->name|escape}
+				{/if}
+			</td>
+			<td class="textright">
+				{if $seasonal->isEditable()}
+				<span class="editseasonalrate">{$seasonal->rate|string_format:'%.2f'}</span>
+				{else}
+				{$seasonal->rate|string_format:'%.2f'}
+				{/if}
+			</td>
+			<td>
+				{if $seasonal->isEditable()}
+				<input type="text" readonly="readonly" class="editseasonalfromdate" value="{$seasonal->fromDate->toString('MMM dd, yyyy')}" />
+				{else}
+				{$seasonal->fromDate->toString('MMM dd, yyyy')}
+				{/if}
+			</td>
+			<td>
+				{if $seasonal->isEditable()}
+				<input type="text" readonly="readonly" class="editseasonaltodate" value="{$seasonal->toDate->toString('MMM dd, yyyy')}" />
+				{else}
+				{$seasonal->toDate->toString('MMM dd, yyyy')}
+				{/if}
+			</td>
+			<td>{$seasonal->getStatus()|escape}</td>
+		</tr>
+		<tr class="seasonal-{$seasonal->sid}" style="display:none">
+			<td style="vertical-align: top">
+				{if $seasonal->isEditable()}
+				<img src="/images/small_add_blue.png" title="Add new item to this seasonal discount" class="link additemtoseasonal" />
+				{/if}
+			</td>
+			<td colspan="5">
+				{foreach from=$seasonal->items item=item}
+					<span class="smallbox"><strong>{$item->itemCode|escape}</strong>
+						{if $seasonal->isEditable()}
+						<img src="/images/small_remove.png" class="link" />
+						{/if}
+					</span>
+				{/foreach}
+			</td>
+		</tr>
+		{/foreach}
+	</tbody>
+</table>
+
+<!-- List of item to add to seasonal -->
+<div id="add-item-to-seasonal-dialog" title="Select an item">
+</div>

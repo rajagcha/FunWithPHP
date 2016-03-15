@@ -1,0 +1,65 @@
+{include file="header.phtml" section="vendors"}
+<script type="text/javascript" src="/js/vendors.js"></script>
+<div id="accordion">
+	<p><a href="#">Add Vendor</a></p>
+	{include file="vendors/add-vendor.phtml"}
+	<p><a href="#">View Vendors</a></p>
+	<div>
+		<table class="report">
+			<thead>
+			<tr>
+				<th> </th>
+				<th>Name</th>
+				<th>Phone</th>
+				<th>Address</th>
+				<th>City</th>
+				<th>State</th>
+				<th>Zip</th>
+			</tr>
+			</thead>
+			<tfoot>
+			</tfoot>
+			<tbody>
+				{foreach from=$vendors item=v}
+				<tr>
+					<td><img src="/images/vendor_view.png" onclick="showVendorItems('vendor-item-list-{$v->vid|escape}');"
+							style="cursor:pointer" /></td>
+					<td>{$v->name|escape}</td>
+					<td>{$v->getPhone()|escape}</td>
+					<td>{$v->address|escape}</td>
+					<td>{$v->city|escape}</td>
+					<td>{$v->state|escape}</td>
+					<td>{$v->zip}</td>
+				</tr>
+				{/foreach}
+			</tbody>
+		</table>
+		
+		<!-- list of items for one vendor -->
+		{foreach from=$vendors item=v}
+		<div id="vendor-item-list-{$v->vid|escape}" title="Supplied Items &mdash; {$v->name|escape}" style="display:none">
+			<table class="report">
+				<thead>
+				<tr>
+					<th>Item Code</th>
+					<th>Item Name</th>
+					<th class="textright">Qty in Stock</th>
+					<th class="textright">Vendor Unit Price</th>
+				</tr>
+				</thead>
+				<tbody>
+				{foreach from=$v->suppliedItems item=item}
+				<tr>
+					<td>{$item->itemCode|escape}</td>
+					<td>{$item->name|escape}</td>
+					<td class="textright">{$item->qty|escape}</td>
+					<td class="textright">{$item->vUPrice|escape}</td>
+				</tr>
+				{/foreach}
+				</tbody>
+			</table>
+		</div>
+		{/foreach}
+	</div>
+</div><!-- END accordion -->
+{include file="footer.phtml"}

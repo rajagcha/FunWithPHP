@@ -1,0 +1,60 @@
+{include file='header.phtml' secion='reports'}
+<script type="text/javascript" src="/js/reports.js"></script>
+<form id="form-report">
+<div class="columns">
+	<div class="column1 report">
+		From:<br /><input type="text" name="from_date" class="input" id="date-from" readonly="readonly" />
+	</div>
+	<div class="column2 report">
+		To:<br /><input type="text" name="to_date" class="input" id="date-to" readonly="readonly" />
+	</div>
+	<div class="column3">
+		<br /><input type="button" class="input submit" value="Report" id="button" />
+	</div>
+</div>
+</form>
+<div class="clear"><br /></div>
+<div id="report-tabs">
+	<ul>
+		<li><a href="#report-tabs-sales">Total sales</a></li>
+		<li><a href="#report-tabs-purchases">Total purchases</a></li>
+		<li><a href="#report-tabs-prediction">Prediction</a></li>
+	</ul>
+	<div id="report-tabs-sales">
+		<p>Please choose the time period for the report.</p>
+	</div>
+	<div id="report-tabs-purchases">
+		<p>Please choose the time period for the report.</p>
+	</div>
+	<div id="report-tabs-prediction">
+		<p>The prediction for the next purchase will be based on the given time period. If no time period is provided, the whole selling history will be used.</p>
+		<br />
+		<div id="result-prediction">
+			<p><strong>Prediction Results:</strong></p>
+			<table class="report">
+				<thead>
+					<tr>
+						<th>Item Code</th>
+						<th class="textright">Qty</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Item Code 1</td>
+						<td class="textright">50</td>
+					</tr>
+					<tr>
+						<td>Item Code 2</td>
+						<td class="textright">20</td>
+					</tr>
+					<tr>
+						<td>Item Code 3</td>
+						<td class="textright">100</td>
+					</tr>
+				</tbody>
+			</table>
+		</div><!-- END prediction result -->
+	</div><!-- END prediction tab -->
+</div><!-- END tabs -->
+<div class="clear"></div>
+{include file='footer.phtml'}

@@ -1,0 +1,53 @@
+{foreach from=$purchases item=purchase}
+<p id="order{$purchase->pid}"><a href="#">Order ID# {$purchase->pid}
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		Date: {$purchase->date->toString('MMM dd, yyyy')}</a></p>
+<div id="detail{$purchase->pid}">
+	<strong>Vendor:</strong> {$purchase->vendor->name|escape}<br />
+	<table class="report">
+		<thead>
+		<tr>
+			<th>Item Code</th>
+			<th>Item Name</th>
+			<th class="textright">Store Unit Price</th>
+			<th class="textright">Qty</th>
+			<th class="textright">Vendor Unit Price</th>
+			<th class="textright">Final Price</th>
+		</tr>
+		</thead>
+		<tfoot>
+				<tr>
+					<td colspan="5" class="textright">Sub-total:</td>
+					<td class="textright">${$purchase->getSubTotal()|string_format:'%.2f'}</td>
+				</tr>
+				<tr>
+					<td colspan="5" class="textright">Tax (%):</td>
+					<td class="textright">{$purchase->tax|string_format:'%.2f'}</td>
+				</tr>
+				<tr>
+					<td colspan="5" class="textright">Total:</td>
+					<td class="textright">${$purchase->getTotal()|string_format:'%.2f'}</td>
+				</tr>
+				<tr>
+					<td colspan="6" class="textright">
+						<input type="button" class="input submit" value="Received"
+							onclick="receiveOrder('{$purchase->pid}')" />
+					</td>
+				</tr>
+			</tfoot>
+		<tbody>
+		{foreach from=$purchase->items item=item}
+		<tr>
+			<td>{$item->itemCode|escape}</td>
+			<td>{$item->name|escape}</td>
+			<td class="textright"><span class="editprice"
+						id="{$item->itemCode|escape}">{$item->sUPrice|string_format:'%.2f'}</td>
+			<td class="textright">{$item->qty}</td>
+			<td class="textright">{$item->vUPrice|string_format:'%.2f'}</td>
+			<td class="textright">{$item->qty*$item->vUPrice|string_format:'%.2f'}</td>
+		</tr>
+		{/foreach}
+		</tbody>
+	</table>
+</div>
+{/foreach}

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title></title>
+<link href="/css/styles.css" rel="stylesheet" type="text/css" />
+<link href="/css/layout.css" rel="stylesheet" type="text/css" />
+<link href="/css/ui-lightness/jquery-ui-1.8.custom.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/js/libs/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="/js/libs/jquery-ui-1.8.custom.min.js"></script>
+<script type="text/javascript" src="/js/menu.js"></script>
+</head>
+<body id="index_3">
+	<div id="site_center">
+		<div id="main" class="style1">
+			<!--header -->
+			<div id="header">
+				<div class="right_bg">
+					<div class="left_bg">
+						<div class="taright"><span style="color:white">Help | About</span>
+							<br />
+					  </div>
+						<div class="colspad">
+							<div class="cols">
+								<div class="col1">
+                                	<br /><br />
+                                	<span class="logo">IMS</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="logo-year">2010</span><br />
+                                    &nbsp;&nbsp;<span class="logo-desc">Inventory Management System</span>
+								</div>
+								<div class="col2">
+									<div class="hbox">
+										<div class="rtall">
+											<div class="ltall">
+												<div class="btall">
+													<div class="br">
+														<div class="bl">
+															<div class="tr">
+																<div class="tl">
+																	<div class="indent">
+																		<div class="h_text">
+																			<div class="right_bg">
+																				<div class="left_bg">
+																					<div id="today">Today is {$smarty.now|date_format:'%B %d, %Y'}</div>
+																					<br /></div>
+																			</div>
+																		</div>
+																		<div class="content">
+																			{if $currentSeasonal == null}
+																			&lowast; There is currently no seasonal discount.<br />
+																				{if $comingSeasonal != null}
+																				&nbsp;&nbsp;&nbsp;&nbsp;&rsaquo;
+																				Coming seasonal discount: <strong>{$comingSeasonal->name|escape}</strong><br />
+																				&nbsp;&nbsp;&nbsp;&nbsp;&rsaquo;
+																				Started on <strong>{$comingSeasonal->fromDate->toString('MMM dd, yyyy')}</strong> &mdash;
+																				Ended on <strong>{$comingSeasonal->toDate->toString('MMM dd, yyyy')}</strong><br />
+																				{else}
+																				&nbsp;&nbsp;&nbsp;&nbsp;&rsaquo;
+																				Coming seasonal discount: <strong>None</strong><br />
+																				&nbsp;&nbsp;&nbsp;&nbsp;&rsaquo;
+																				Started on <strong>None</strong> &mdash;
+																				Ended on <strong>None</strong><br />
+																				{/if}
+																			{else}
+																			&lowast; There is currently a seasonal discount running at the store.<br />
+																			&nbsp;&nbsp;&nbsp;&nbsp;&rsaquo;
+																			Seasonal name: <strong>{$currentSeasonal->name|escape}</strong> &mdash;
+																			Discount rate: <strong>{$currentSeasonal->rate|string_format:'%.2f'}%</strong>
+																			<br />
+																			&nbsp;&nbsp;&nbsp;&nbsp;&rsaquo;
+																			Started on <strong>{$currentSeasonal->fromDate->toString('MMM dd, yyyy')}</strong> &mdash;
+																			Ended on <strong>{$currentSeasonal->toDate->toString('MMM dd, yyyy')}</strong><br />
+																			{/if}
+																			<p style="text-align:center">
+																				{if $section != 'discounts'}<a href="/discounts" class="link-to-discounts">{/if}<strong>&laquo;
+																						Manage Seasonal Discounts/Coupons &raquo;</strong>
+																					{if $section != 'discounts'}</a>{/if}</p></div>
+																		<div class="taright"><br />
+																	  </div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="clear"></div>
+							</div>
+						</div>
+						<div class="menu">
+							<a href="/"><img
+								{if $section == 'home'}src="/images/home_a.jpg" class="active"
+								{else}src="/images/home.jpg"
+								{/if}alt=""
+								/></a><a href="/vendors"><img
+								{if $section == 'vendors'}src="/images/vendors_a.jpg" class="active"
+								{else}src="/images/vendors.jpg"
+								{/if}alt=""
+								/></a><a href="/inventory"><img
+								{if $section == 'inventory'}src="/images/inventory_a.jpg" class="active"
+								{else}src="/images/inventory.jpg"
+								{/if}alt=""
+								/></a><a href="/purchases"><img
+								{if $section == 'purchases'}src="/images/purchases_a.jpg" class="active"
+								{else}src="/images/purchases.jpg"
+								{/if}alt=""
+								/></a><a href="/sales"><img
+								{if $section == 'sales'}src="/images/sales_a.jpg" class="active"
+								{else}src="/images/sales.jpg"
+								{/if}alt=""
+								/></a><a href="/reports"><img
+								{if $section == 'reporst'}src="/images/reports_a.jpg" class="active"
+								{else}src="/images/reports.jpg"
+								{/if}alt=""
+								/></a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--header end-->
+			<div id="middle">
+				<div class="indent">
+					<div id="navigator">{sitenav trail=$siteNav->getTrail() separator=' &raquo; '}</div>

@@ -1,0 +1,519 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.7	//
+DiscountsController	Controller/DiscountsController.php	/^class DiscountsController extends MyControllerAction$/;"	c
+ErrorController	Controller/ErrorController.php	/^class ErrorController extends MyControllerAction$/;"	c
+IndexController	Controller/IndexController.php	/^class IndexController extends MyControllerAction$/;"	c
+InventoryController	Controller/InventoryController.php	/^class InventoryController extends MyControllerAction$/;"	c
+Model_Coupon	Model/Coupon.php	/^class Model_Coupon extends Model_Discount$/;"	c
+Model_Db	Model/Db.php	/^class Model_Db$/;"	c
+Model_Discount	Model/Discount.php	/^class Model_Discount$/;"	c
+Model_Form	Model/Form.php	/^abstract class Model_Form$/;"	c
+Model_Form_Discounts_AddCoupon	Model/Form/Discounts/AddCoupon.php	/^class Model_Form_Discounts_AddCoupon extends Model_Form$/;"	c
+Model_Form_Discounts_AddSeasonal	Model/Form/Discounts/AddSeasonal.php	/^class Model_Form_Discounts_AddSeasonal extends Model_Form$/;"	c
+Model_Form_Purchases_GetReceived	Model/Form/Purchases/GetReceived.php	/^class Model_Form_Purchases_GetReceived extends Model_Form$/;"	c
+Model_Form_Purchases_PlaceOrder	Model/Form/Purchases/PlaceOrder.php	/^class Model_Form_Purchases_PlaceOrder extends Model_Form$/;"	c
+Model_Form_Reports	Model/Form/Reports.php	/^class Model_Form_Reports extends Model_Form$/;"	c
+Model_Form_Sales_CreateBill	Model/Form/Sales/CreateBill.php	/^class Model_Form_Sales_CreateBill extends Model_Form$/;"	c
+Model_Form_Sales_ViewSales	Model/Form/Sales/ViewSales.php	/^class Model_Form_Sales_ViewSales extends Model_Form$/;"	c
+Model_Form_Vendor	Model/Form/Vendor.php	/^class Model_Form_Vendor extends Model_Form$/;"	c
+Model_Item	Model/Item.php	/^class Model_Item$/;"	c
+Model_Purchase	Model/Purchase.php	/^class Model_Purchase$/;"	c
+Model_Sale	Model/Sale.php	/^class Model_Sale$/;"	c
+Model_Seasonal	Model/Seasonal.php	/^class Model_Seasonal extends Model_Discount$/;"	c
+Model_Vendor	Model/Vendor.php	/^class Model_Vendor$/;"	c
+MyControllerAction	MyControllerAction.php	/^class MyControllerAction extends Zend_Controller_Action$/;"	c
+MyNavigator	MyNavigator.php	/^class MyNavigator$/;"	c
+MySmartyZend	MySmartyZend.php	/^class MySmartyZend extends Zend_View_Abstract$/;"	c
+PurchasesController	Controller/PurchasesController.php	/^class PurchasesController extends MyControllerAction$/;"	c
+ReportsController	Controller/ReportsController.php	/^class ReportsController extends MyControllerAction$/;"	c
+SalesController	Controller/SalesController.php	/^class SalesController extends MyControllerAction$/;"	c
+VendorsController	Controller/VendorsController.php	/^class VendorsController extends MyControllerAction$/;"	c
+__construct	Model/Coupon.php	/^	public function __construct()$/;"	f
+__construct	Model/Db.php	/^	public function __construct(Zend_Db_Adapter_Abstract $db)$/;"	f
+__construct	Model/Discount.php	/^	public function __construct() {}$/;"	f
+__construct	Model/Form.php	/^	public function __construct()$/;"	f
+__construct	Model/Form/Vendor.php	/^	public function __construct()$/;"	f
+__construct	Model/Item.php	/^	public function __construct()$/;"	f
+__construct	Model/Purchase.php	/^	public function __construct()$/;"	f
+__construct	Model/Sale.php	/^	public function __construct()$/;"	f
+__construct	Model/Seasonal.php	/^	public function __construct()$/;"	f
+__construct	Model/Vendor.php	/^	public function __construct()$/;"	f
+__construct	MySmartyZend.php	/^	public function __construct()$/;"	f
+__get	Model/Form.php	/^	public function __get($name)$/;"	f
+__get	MySmartyZend.php	/^	public function __get($key)$/;"	f
+__isset	MySmartyZend.php	/^	public function __isset($key)$/;"	f
+__set	Model/Form.php	/^	public function __set($name, $val)$/;"	f
+__set	MySmartyZend.php	/^	public function __set($key, $val)$/;"	f
+__unset	MySmartyZend.php	/^	public function __unset($key)$/;"	f
+_cmpSeasonal	Model/Db.php	/^	static function _cmpSeasonal(Model_Seasonal $s1, Model_Seasonal $s2)$/;"	f
+_cmpSeasonalByRate	Model/Db.php	/^	static function _cmpSeasonalByRate(Model_Seasonal $s1, Model_Seasonal $s2)$/;"	f
+_cmpVendor	Model/Db.php	/^	static function _cmpVendor(Model_Vendor $v1, Model_Vendor $v2)$/;"	f
+_run	MySmartyZend.php	/^	public function _run() {}$/;"	f
+_trail	MyNavigator.php	/^	private $_trail = array();$/;"	v
+a	View/test.php	/^$a = array();$/;"	v
+action	MyControllerAction.php	/^	public function getUrl($controller = null, $action = null)$/;"	v
+action	MySmartyZend/plugins/function.geturl.php	/^	$action = isset($params['action']) ? $params['action'] : null;$/;"	v
+addCoupon	Model/Db.php	/^	public function addCoupon($coupon)$/;"	f
+addCouponAction	Controller/DiscountsController.php	/^	public function addCouponAction()$/;"	f
+addError	Model/Form.php	/^	public function addError($key, $val)$/;"	f
+addItemToSeasonal	Model/Db.php	/^	public function addItemToSeasonal($sid, $code)$/;"	f
+addItemToSeasonalAction	Controller/DiscountsController.php	/^	public function addItemToSeasonalAction()$/;"	f
+addSeasonal	Model/Db.php	/^	public function addSeasonal(Model_Seasonal $seasonal)$/;"	f
+addSeasonalAction	Controller/DiscountsController.php	/^	public function addSeasonalAction()$/;"	f
+addStep	MyNavigator.php	/^	public function addStep($title, $link = '')$/;"	f
+addVendor	Model/Db.php	/^	public function addVendor(Model_Vendor $vendor)$/;"	f
+addVendorAction	Controller/VendorsController.php	/^	public function addVendorAction()$/;"	f
+affectedRows	Model/Db.php	/^		$affectedRows = $this->db->insert('Vendors', $data);$/;"	v
+assign	MySmartyZend.php	/^	public function assign($spec, $val = null)$/;"	f
+bill	Controller/SalesController.php	/^				$bill = new Model_Sale();$/;"	v
+class	Model/Db.php	/^ * Db interface class$/;"	i
+clearVars	MySmartyZend.php	/^	public function clearVars()$/;"	f
+code	Controller/DiscountsController.php	/^			$code = strtoupper(trim($request->getPost('coupon_code')));$/;"	v
+code	Controller/DiscountsController.php	/^			$code = strtoupper(trim($request->getPost('item_code')));$/;"	v
+code	Model/Form/Purchases/PlaceOrder.php	/^				$code = strtoupper(trim($tmp[$i]));$/;"	v
+code	Model/Form/Sales/CreateBill.php	/^				$code = strtoupper(trim($tmp[$i]));$/;"	v
+code	Model/Form/Vendor.php	/^				$code = trim($code);$/;"	v
+computeStoreFinalPrice	Model/Item.php	/^	public function computeStoreFinalPrice()$/;"	f
+cond	Model/Db.php	/^			$cond = $this->db->quoteInto('item_code = ?', $item->itemCode);$/;"	v
+cond	Model/Db.php	/^		$cond = $this->db->quoteInto('item_code = ?', $code);$/;"	v
+cond	Model/Db.php	/^		$cond = $this->db->quoteInto('item_code = ?', trim(strtoupper($code)));$/;"	v
+cond	Model/Db.php	/^		$cond = array($/;"	v
+cond	Model/Db.php	/^		$cond = array($this->db->quoteInto('LOWER(i.name) LIKE LOWER(?)',$/;"	v
+cond	Model/Db.php	/^		$cond = array($this->db->quoteInto('coupon_code = ?', $code));$/;"	v
+cond	Model/Db.php	/^		$cond = array($this->db->quoteInto('from_date > ?', $date));$/;"	v
+cond	Model/Db.php	/^		$cond = array($this->db->quoteInto('i.item_code LIKE UPPER(?)',$/;"	v
+cond	Model/Db.php	/^		$cond = array(sprintf('s.sid = %d', $sid));$/;"	v
+cond	Model/Db.php	/^		$cond = array(sprintf('v.vid = %d', (int) $vid));$/;"	v
+cond	Model/Db.php	/^		$cond = sprintf($this->db->quoteInto('sid = %d AND item_code = ?', $code), $sid);$/;"	v
+cond	Model/Db.php	/^		$cond = sprintf('si.sid = %d AND i.item_code = si.item_code', $sid);$/;"	v
+cond	Model/Db.php	/^		$cond = sprintf('sid = %d', $sid);$/;"	v
+conds	Model/Db.php	/^		$conds = array($/;"	v
+conds	Model/Db.php	/^		$conds = array(sprintf('arrived = %d', (int) false));$/;"	v
+config	MySmartyZend.php	/^		$config = Zend_Registry::get("config");$/;"	v
+controller	MySmartyZend/plugins/function.geturl.php	/^	$controller = isset($params['controller']) ? $params['controller'] : null;$/;"	v
+coupCode	Model/Form/Sales/CreateBill.php	/^				$coupCode = strtoupper(trim($cpCodes[$i]));$/;"	v
+coupon	Controller/DiscountsController.php	/^					$coupon = new Model_Coupon();$/;"	v
+coupon	Controller/DiscountsController.php	/^			$coupon = $this->db->getCoupon($code);$/;"	v
+coupon	Controller/DiscountsController.php	/^			$coupon = $this->db->getCoupon($couponCode);$/;"	v
+coupon	Controller/DiscountsController.php	/^			$coupon = $this->db->getCoupon(strtoupper(trim($request->getPost('coupon_code'))));$/;"	v
+coupon	Controller/SalesController.php	/^							$coupon = $this->db->getCoupon($form->couponCodes[$i]);$/;"	v
+coupon	Controller/SalesController.php	/^					$coupon = null;$/;"	v
+coupon	Controller/SalesController.php	/^			$coupon = $this->db->getCoupon($couponCode);$/;"	v
+coupon	Model/Db.php	/^				$coupon = new Model_Coupon();$/;"	v
+coupon	Model/Db.php	/^			$coupon = new Model_Coupon();$/;"	v
+couponCode	Controller/DiscountsController.php	/^			$couponCode = strtoupper(trim($request->getPost('coupon_code')));$/;"	v
+couponCode	Controller/SalesController.php	/^			$couponCode = strtoupper(trim($request->getPost('coupon_code')));$/;"	v
+couponCodes	Model/Form/Sales/CreateBill.php	/^			$couponCodes = array();$/;"	v
+couponExists	Model/Db.php	/^	public function couponExists($code)$/;"	f
+cpCodes	Model/Form/Sales/CreateBill.php	/^			$cpCodes = $request->getPost('coupon_codes');$/;"	v
+createBill	Model/Db.php	/^	public function createBill(Model_Sale $bill)$/;"	f
+createBillAction	Controller/SalesController.php	/^	public function createBillAction()$/;"	f
+criteria	Controller/InventoryController.php	/^			$criteria = (int) $request->getPost('criteria');$/;"	v
+currentSeasonal	View/header.phtml	/^																			{if $currentSeasonal == null}$/;"	v
+data	Model/Db.php	/^				$data = array($/;"	v
+data	Model/Db.php	/^				$data = array('qty' => intval($re) + intval($row->qty));$/;"	v
+data	Model/Db.php	/^				$data = array('used' => 1);$/;"	v
+data	Model/Db.php	/^			$data = array($/;"	v
+data	Model/Db.php	/^			$data = array('name' => $item->name);$/;"	v
+data	Model/Db.php	/^			$data = array('qty' => $qty - $item->qty);$/;"	v
+data	Model/Db.php	/^		$data = array($/;"	v
+data	Model/Db.php	/^		$data = array('arrived' => 1);$/;"	v
+data	Model/Db.php	/^		$data = array('discount_rate' => $rate);$/;"	v
+data	Model/Db.php	/^		$data = array('from_date' => $date->toString(Model_Db::SQL_DATE_ZFMT));$/;"	v
+data	Model/Db.php	/^		$data = array('item_code' => $itemCode);$/;"	v
+data	Model/Db.php	/^		$data = array('name' => $name);$/;"	v
+data	Model/Db.php	/^		$data = array('s_uprice' => floatval($price));$/;"	v
+data	Model/Db.php	/^		$data = array('to_date' => $date->toString(Model_Db::SQL_DATE_ZFMT));$/;"	v
+date	Controller/DiscountsController.php	/^			$date = new Zend_Date($request->getPost('date'), 'MMM dd, yyyy');$/;"	v
+date	Controller/SalesController.php	/^				$date = new Zend_Date($date, 'MMM dd, yyyy');$/;"	v
+date	Controller/SalesController.php	/^			$date = $request->getPost('date');$/;"	v
+date	Model/Db.php	/^		$date = Zend_Date::now()->toString(Model_Db::SQL_DATE_ZFMT);$/;"	v
+date	Model/Form/Purchases/PlaceOrder.php	/^		$date = $request->getPost('date');$/;"	v
+date	Model/Form/Sales/CreateBill.php	/^		$date = $request->getPost('date');$/;"	v
+dateCond	Model/Db.php	/^		$dateCond = $this->db->quoteInto($dateCond . ' AND p.pdate <= ?', $to->toString(Model_Db::SQL_DATE_ZFMT));$/;"	v
+dateCond	Model/Db.php	/^		$dateCond = $this->db->quoteInto($dateCond . ' AND s.sdate <= ?', $to->toString(Model_Db::SQL_DATE_ZFMT));$/;"	v
+dateCond	Model/Db.php	/^		$dateCond = $this->db->quoteInto('p.pdate >= ?', $from->toString(Model_Db::SQL_DATE_ZFMT));$/;"	v
+dateCond	Model/Db.php	/^		$dateCond = $this->db->quoteInto('s.sdate >= ?', $from->toString(Model_Db::SQL_DATE_ZFMT));$/;"	v
+dateType	Controller/DiscountsController.php	/^			$dateType = $request->getPost('date_type');$/;"	v
+defaultParams	MySmartyZend/plugins/function.sitenav.php	/^	$defaultParams = array('trail' => array(), 'separator' => ' &gt; ', 'truncate' => 40);$/;"	v
+discount	Model/Item.php	/^		$discount = 0;$/;"	v
+encoded	MyControllerAction.php	/^	public function sendJSON($data, $encoded = true)$/;"	v
+error	Controller/ErrorController.php	/^    	$error = $request->getParam('error_handler');$/;"	v
+error404Action	Controller/ErrorController.php	/^    public function error404Action()$/;"	f
+errorAction	Controller/ErrorController.php	/^    public function errorAction()$/;"	f
+errors	Controller/ErrorController.php	/^		$errors = $this->getRequest()->getParam('error_handler');$/;"	v
+finalPrice	Model/Item.php	/^		$finalPrice = $this->qty * $this->sUPrice;$/;"	v
+final_price	Model/Db.php	/^		$final_price = 'SUM(si.qty * si.s_uprice - ' . $/;"	v
+for	Model/Form/Vendor.php	/^	 * @override See Model_Form class for more details$/;"	c
+for	MyControllerAction.php	/^ * An abstract class for controllers$/;"	c
+form	Controller/DiscountsController.php	/^			$form = new Model_Form_Discounts_AddCoupon();$/;"	v
+form	Controller/DiscountsController.php	/^			$form = new Model_Form_Discounts_AddSeasonal();$/;"	v
+form	Controller/PurchasesController.php	/^			$form = new Model_Form_Purchases_GetReceived();$/;"	v
+form	Controller/PurchasesController.php	/^			$form = new Model_Form_Purchases_PlaceOrder();$/;"	v
+form	Controller/ReportsController.php	/^			$form = new Model_Form_Reports();$/;"	v
+form	Controller/SalesController.php	/^			$form = new Model_Form_Sales_CreateBill();$/;"	v
+form	Controller/SalesController.php	/^			$form = new Model_Form_Sales_ViewSales();$/;"	v
+form	Controller/VendorsController.php	/^		$form = new Model_Form_Vendor();$/;"	v
+fromDate	Model/Db.php	/^		$fromDate = $fromDate->toString(Model_Db::SQL_DATE_ZFMT);$/;"	v
+fromDate	Model/Form/Discounts/AddCoupon.php	/^			$fromDate = new Zend_Date($fromDate, 'MMM dd, yyyy');$/;"	v
+fromDate	Model/Form/Discounts/AddCoupon.php	/^		$fromDate = $request->getPost('from_date');$/;"	v
+fromDate	Model/Form/Discounts/AddSeasonal.php	/^			$fromDate = new Zend_Date($fromDate, 'MMM dd, yyyy');$/;"	v
+fromDate	Model/Form/Discounts/AddSeasonal.php	/^		$fromDate = $request->getPost('seasonal_from_date');$/;"	v
+fromDate	Model/Form/Purchases/GetReceived.php	/^		$fromDate = trim($request->getPost('from_date'));$/;"	v
+fromDate	Model/Form/Reports.php	/^		$fromDate = trim($request->getPost('from_date'));$/;"	v
+fromDate	Model/Form/Sales/ViewSales.php	/^		$fromDate = trim($request->getPost('from_date'));$/;"	v
+getCoupon	Model/Db.php	/^	public function getCoupon($code)$/;"	f
+getCouponAction	Controller/DiscountsController.php	/^	public function getCouponAction()$/;"	f
+getCouponRateAction	Controller/SalesController.php	/^	public function getCouponRateAction()$/;"	f
+getCoupons	Model/Db.php	/^	public function getCoupons($conds = array())$/;"	f
+getCurrentSeasonal	Model/Db.php	/^	public function getCurrentSeasonal()$/;"	f
+getCustomUrl	MyControllerAction.php	/^	public function getCustomUrl($route, array $options)$/;"	f
+getEngine	MySmartyZend.php	/^	public function getEngine()$/;"	f
+getErrors	Model/Form.php	/^	public function getErrors($key = null)$/;"	f
+getExclusiveItemsOfSeasonal	Model/Db.php	/^	public function getExclusiveItemsOfSeasonal($sid)$/;"	f
+getExclusiveItemsOfSeasonalAction	Controller/DiscountsController.php	/^	public function getExclusiveItemsOfSeasonalAction()$/;"	f
+getInventory	Model/Db.php	/^	public function getInventory()$/;"	f
+getItemCodes	Model/Db.php	/^	public function getItemCodes()$/;"	f
+getItemsByVendor	Model/Db.php	/^	public function getItemsByVendor($vid)$/;"	f
+getItemsByVendorAction	Controller/InventoryController.php	/^	public function getItemsByVendorAction()$/;"	f
+getPendingPurchases	Model/Db.php	/^	public function getPendingPurchases()$/;"	f
+getPhone	Model/Vendor.php	/^	public function getPhone()$/;"	f
+getPurchases	Model/Db.php	/^	public function getPurchases($conds = array())$/;"	f
+getQtyLeft	Model/Db.php	/^	public function getQtyLeft($code)$/;"	f
+getReceivedPurchases	Model/Db.php	/^	public function getReceivedPurchases($fromDate, $toDate)$/;"	f
+getReceivedPurchasesAction	Controller/PurchasesController.php	/^	public function getReceivedPurchasesAction()$/;"	f
+getSUPriceAction	Controller/SalesController.php	/^	public function getSUPriceAction()$/;"	f
+getSUPriceByItemCode	Model/Db.php	/^	public function getSUPriceByItemCode($code)$/;"	f
+getSales	Model/Db.php	/^	public function getSales($conds = array())$/;"	f
+getSalesAction	Controller/SalesController.php	/^	public function getSalesAction()$/;"	f
+getSalesWithinDates	Model/Db.php	/^	public function getSalesWithinDates($fromDate, $toDate)$/;"	f
+getSeasonal	Model/Db.php	/^	public function getSeasonal($sid)$/;"	f
+getSeasonalByItemCodeAndDate	Model/Db.php	/^	public function getSeasonalByItemCodeAndDate($code, Zend_Date $date)$/;"	f
+getSeasonalRateAction	Controller/SalesController.php	/^	public function getSeasonalRateAction()$/;"	f
+getSeasonals	Model/Db.php	/^	public function getSeasonals($conds = array())$/;"	f
+getStatus	Model/Coupon.php	/^	public function getStatus()$/;"	f
+getStatus	Model/Discount.php	/^	public function getStatus()$/;"	f
+getSubTotal	Model/Purchase.php	/^	public function getSubTotal()$/;"	f
+getSubTotal	Model/Sale.php	/^	public function getSubTotal()$/;"	f
+getTitle	MyNavigator.php	/^	public function getTitle()$/;"	f
+getTotal	Model/Purchase.php	/^	public function getTotal()$/;"	f
+getTotal	Model/Sale.php	/^	public function getTotal()$/;"	f
+getTrail	MyNavigator.php	/^	public function getTrail()$/;"	f
+getUpcomingSeasonal	Model/Db.php	/^	public function getUpcomingSeasonal()$/;"	f
+getUrl	MyControllerAction.php	/^	public function getUrl($controller = null, $action = null)$/;"	f
+getVUPrice	Model/Vendor.php	/^	public function getVUPrice($code)$/;"	f
+getVUPriceAction	Controller/PurchasesController.php	/^	public function getVUPriceAction()$/;"	f
+getVUPriceByItemCode	Model/Db.php	/^	public function getVUPriceByItemCode($vid, $code)$/;"	f
+getVendor	Model/Db.php	/^	public function getVendor($vid)$/;"	f
+getVendors	Model/Db.php	/^	public function getVendors($cond = array())$/;"	f
+getVendorsByItemCode	Model/Db.php	/^	public function getVendorsByItemCode($code)$/;"	f
+getVendorsByItemName	Model/Db.php	/^	public function getVendorsByItemName($name)$/;"	f
+hasError	Controller/PurchasesController.php	/^							$hasError = true;$/;"	v
+hasError	Controller/PurchasesController.php	/^					$hasError = false;$/;"	v
+hasError	Model/Form.php	/^	public function hasError($key = null)$/;"	f
+hasItem	Model/Seasonal.php	/^	public function hasItem($code)$/;"	f
+hasItem	Model/Vendor.php	/^	public function hasItem($code)$/;"	f
+helper	MySmartyZend/plugins/function.geturl.php	/^	$helper = Zend_Controller_Action_HelperBroker::getStaticHelper('url');$/;"	v
+indexAction	Controller/DiscountsController.php	/^	public function indexAction()$/;"	f
+indexAction	Controller/IndexController.php	/^    public function indexAction()$/;"	f
+indexAction	Controller/InventoryController.php	/^    public function indexAction()$/;"	f
+indexAction	Controller/PurchasesController.php	/^	public function indexAction()$/;"	f
+indexAction	Controller/ReportsController.php	/^	public function indexAction()$/;"	f
+indexAction	Controller/SalesController.php	/^	public function indexAction()$/;"	f
+indexAction	Controller/VendorsController.php	/^    public function indexAction()$/;"	f
+init	Controller/DiscountsController.php	/^	public function init()$/;"	f
+init	Controller/InventoryController.php	/^	public function init()$/;"	f
+init	Controller/PurchasesController.php	/^	public function init()$/;"	f
+init	Controller/ReportsController.php	/^	public function init()$/;"	f
+init	Controller/SalesController.php	/^	public function init()$/;"	f
+init	Controller/VendorsController.php	/^	public function init()$/;"	f
+init	MyControllerAction.php	/^	public function init()$/;"	f
+is	MyNavigator.php	/^ * This class is to build the site navigator.$/;"	c
+is	MySmartyZend.php	/^ * This class is to replace the default "view" of Zend by Smarty.$/;"	c
+isAjax	Controller/InventoryController.php	/^		$isAjax = $request->isXmlHttpRequest();$/;"	v
+isAjax	Controller/VendorsController.php	/^		$isAjax = $request->isXmlHttpRequest();$/;"	v
+isEditable	Model/Discount.php	/^	public function isEditable()$/;"	f
+isPost	Controller/InventoryController.php	/^		$isPost = $request->isPost();$/;"	v
+isRemovable	Model/Coupon.php	/^	public function isRemovable()$/;"	f
+isRemovable	Model/Discount.php	/^	public function isRemovable()$/;"	f
+item	Controller/DiscountsController.php	/^					$item = new Model_Item();$/;"	v
+item	Controller/PurchasesController.php	/^								$item = new Model_Item();$/;"	v
+item	Controller/SalesController.php	/^							$item = new Model_Item();$/;"	v
+item	Controller/VendorsController.php	/^						$item = new Model_Item();$/;"	v
+item	Model/Db.php	/^			$item = new Model_Item();$/;"	v
+itemCode	Controller/DiscountsController.php	/^			$itemCode = strtoupper(trim($request->getPost('item_code')));$/;"	v
+itemCode	Controller/InventoryController.php	/^			$itemCode = substr($itemCode, strpos($itemCode, '_') + 1);$/;"	v
+itemCode	Controller/InventoryController.php	/^			$itemCode = trim(strtoupper($request->getPost('item_code')));$/;"	v
+itemCode	Controller/InventoryController.php	/^			$itemCode = trim(strtoupper($request->getPost('name_item_code')));$/;"	v
+itemCode	Controller/PurchasesController.php	/^							$itemCode = strtoupper(trim($form->itemCodes[$i]));$/;"	v
+itemCode	Controller/PurchasesController.php	/^						$itemCode = $form->itemCodes[$i];$/;"	v
+itemCode	Controller/PurchasesController.php	/^			$itemCode = strtoupper(trim($request->getPost('item_code')));$/;"	v
+itemCode	Controller/SalesController.php	/^					$itemCode = $form->itemCodes[$i];$/;"	v
+itemCode	Controller/SalesController.php	/^			$itemCode = strtoupper(trim($request->getPost('item_code')));$/;"	v
+itemCode	Controller/VendorsController.php	/^						$itemCode = strtoupper(trim($form->item_codes[$i]));$/;"	v
+itemCodes	Controller/DiscountsController.php	/^			$itemCodes = $this->db->getExclusiveItemsOfSeasonal($sid);$/;"	v
+itemCodes	Controller/DiscountsController.php	/^		$itemCodes = $this->db->getItemCodes();$/;"	v
+itemCodes	Model/Form/Purchases/PlaceOrder.php	/^			$itemCodes = array();$/;"	v
+itemCodes	Model/Form/Sales/CreateBill.php	/^			$itemCodes = array();$/;"	v
+itemCodes	Model/Form/Vendor.php	/^			$itemCodes = array();$/;"	v
+itemExists	Model/Db.php	/^	public function itemExists($code)$/;"	f
+itemExistsInSeasonal	Model/Db.php	/^	public function itemExistsInSeasonal($sid, $code)$/;"	f
+itemNames	Model/Form/Vendor.php	/^			$itemNames = array();$/;"	v
+itemQties	Model/Form/Purchases/PlaceOrder.php	/^			$itemQties = array();$/;"	v
+itemQties	Model/Form/Sales/CreateBill.php	/^			$itemQties = array();$/;"	v
+itemQty	Model/Form/Purchases/PlaceOrder.php	/^				$itemQty = (int) $qty[$i];$/;"	v
+itemQty	Model/Form/Sales/CreateBill.php	/^				$itemQty = (int) $qty[$i];$/;"	v
+items	Controller/InventoryController.php	/^		$items = $this->db->getInventory();$/;"	v
+items	Model/Seasonal.php	/^		$items = array();$/;"	v
+jsonItemCodes	Controller/DiscountsController.php	/^		$jsonItemCodes = array();$/;"	v
+k	MySmartyZend/plugins/function.sitenav.php	/^	foreach ($defaultParams as $k => $v) {$/;"	v
+keyword	Controller/InventoryController.php	/^			$keyword = $request->getPost('keyword');$/;"	v
+link	MyNavigator.php	/^	public function addStep($title, $link = '')$/;"	v
+links	MySmartyZend/plugins/function.sitenav.php	/^	$links = array();$/;"	v
+n	Model/Db.php	/^				$n = $this->db->insert('Items', $data);$/;"	v
+n	Model/Db.php	/^				$n = $this->db->update('Coupons', $data, $this->db->quoteInto('coupon_code = ?', $item->coupon->code));$/;"	v
+n	Model/Db.php	/^				$n = $this->db->update('Items', $data,$/;"	v
+n	Model/Db.php	/^			$n = $this->db->insert('Sales_Items', $data);$/;"	v
+n	Model/Db.php	/^			$n = $this->db->update('Items', $data, $cond);$/;"	v
+n	Model/Db.php	/^			$n = $this->db->update('Items', $data, $this->db->quoteInto('item_code = ?', $item->itemCode));$/;"	v
+n	Model/Db.php	/^		$n = $this->db->delete('Coupons', $this->db->quoteInto('coupon_code = ?', $code));$/;"	v
+n	Model/Db.php	/^		$n = $this->db->delete('Seasonals', $cond);$/;"	v
+n	Model/Db.php	/^		$n = $this->db->fetchOne($sql);$/;"	v
+n	Model/Db.php	/^		$n = $this->db->insert('Coupons', $data);$/;"	v
+n	Model/Db.php	/^		$n = $this->db->insert('Purchases', $data);$/;"	v
+n	Model/Db.php	/^		$n = $this->db->insert('Sales', $data);$/;"	v
+n	Model/Db.php	/^		$n = $this->db->insert('Seasonals', $data);$/;"	v
+n	Model/Db.php	/^		$n = $this->db->update('Coupons', $data, $this->db->quoteInto('coupon_code = ?', $code));$/;"	v
+n	Model/Db.php	/^		$n = $this->db->update('Coupons', $data, $this->db->quoteInto('coupon_code = ?', $couponCode));$/;"	v
+n	Model/Db.php	/^		$n = $this->db->update('Items', $data, $cond);$/;"	v
+n	Model/Db.php	/^		$n = $this->db->update('Purchases', $data, sprintf('pid = %d', $pid));$/;"	v
+n	Model/Db.php	/^		$n = (int) $this->db->fetchOne($sql);$/;"	v
+n	Model/Db.php	/^		$n = count($result);$/;"	v
+n	Model/Db.php	/^		return $n == 1;$/;"	v
+n1	Model/Db.php	/^		$n1 = strtolower($s1->name);$/;"	v
+n2	Model/Db.php	/^		$n2 = strtolower($s2->name);$/;"	v
+name	Controller/DiscountsController.php	/^			$name = trim($request->getPost('name'));$/;"	v
+name	Controller/InventoryController.php	/^			$name = trim($request->getPost('name'));$/;"	v
+name	Model/Form/Vendor.php	/^				$name = trim($name);$/;"	v
+name1	Model/Db.php	/^		$name1 = strtoupper($v1->name);$/;"	v
+name2	Model/Db.php	/^		$name2 = strtoupper($v2->name);$/;"	v
+numSteps	MySmartyZend/plugins/function.sitenav.php	/^	$numSteps = count($params['trail']);$/;"	v
+ok	Controller/PurchasesController.php	/^			$ok = $this->db->setPurchaseArrived($pid);$/;"	v
+ok	Controller/VendorsController.php	/^					$ok = $this->db->addVendor($vendor);$/;"	v
+options	MySmartyZend/plugins/function.usstateoption.php	/^	$options = '';$/;"	v
+p	Model/Form/Vendor.php	/^				$p = floatval($p);$/;"	v
+phoneExists	Controller/VendorsController.php	/^				$phoneExists = $this->db->phoneExists($form->phone);$/;"	v
+phoneExists	Model/Db.php	/^	public function phoneExists($phone)$/;"	f
+pid	Controller/PurchasesController.php	/^			$pid = (int) $request->getPost('pid');$/;"	v
+pid	Model/Db.php	/^				$pid = $row->pid;$/;"	v
+pid	Model/Db.php	/^		$pid = $this->db->lastInsertId();$/;"	v
+pid	Model/Db.php	/^		$pid = -1;$/;"	v
+placeOrder	Model/Db.php	/^	public function placeOrder($purchase)$/;"	f
+placeOrderAction	Controller/PurchasesController.php	/^	public function placeOrderAction()$/;"	f
+postDispatch	MyControllerAction.php	/^	public function postDispatch()$/;"	f
+price	Controller/InventoryController.php	/^			$price = floatval($request->getPost('s_uprice'));$/;"	v
+price	Controller/PurchasesController.php	/^			$price = $this->db->getVUPriceByItemCode($vid, $itemCode);$/;"	v
+price	Controller/SalesController.php	/^			$price = $this->db->getSUPriceByItemCode($itemCode);$/;"	v
+prices	Model/Form/Vendor.php	/^			$prices = array();$/;"	v
+process	Model/Form.php	/^	abstract public function process(Zend_Controller_Request_Abstract $request);$/;"	f
+process	Model/Form/Discounts/AddCoupon.php	/^	public function process(Zend_Controller_Request_Abstract $request)$/;"	f
+process	Model/Form/Discounts/AddSeasonal.php	/^	public function process(Zend_Controller_Request_Abstract $request)$/;"	f
+process	Model/Form/Purchases/GetReceived.php	/^	public function process(Zend_Controller_Request_Abstract $request)$/;"	f
+process	Model/Form/Purchases/PlaceOrder.php	/^	public function process(Zend_Controller_Request_Abstract $request)$/;"	f
+process	Model/Form/Reports.php	/^	public function process(Zend_Controller_Request_Abstract $request)$/;"	f
+process	Model/Form/Sales/CreateBill.php	/^	public function process(Zend_Controller_Request_Abstract $request)$/;"	f
+process	Model/Form/Sales/ViewSales.php	/^	public function process(Zend_Controller_Request_Abstract $request)$/;"	f
+process	Model/Form/Vendor.php	/^	public function process(Zend_Controller_Request_Abstract $request)$/;"	f
+purchase	Controller/PurchasesController.php	/^						$purchase = new Model_Purchase();$/;"	v
+purchase	Model/Db.php	/^				$purchase = new Model_Purchase();$/;"	v
+purchases	Controller/PurchasesController.php	/^				$purchases = $this->db->getReceivedPurchases($form->fromDate, $form->toDate);$/;"	v
+qty	Model/Db.php	/^			$qty = (int) $this->db->fetchOne($sql);$/;"	v
+qty	Model/Form/Purchases/PlaceOrder.php	/^			$qty = $request->getPost('qty');$/;"	v
+qty	Model/Form/Sales/CreateBill.php	/^			$qty = $request->getPost('qty');$/;"	v
+rate	Controller/DiscountsController.php	/^			$rate = doubleval($request->getPost('rate'));$/;"	v
+rate	Controller/DiscountsController.php	/^			$rate = floatval($request->getPost('rate'));$/;"	v
+rate	Controller/SalesController.php	/^					$rate = $seasonal->rate;$/;"	v
+rate	Controller/SalesController.php	/^				$rate = $coupon->rate;$/;"	v
+rate	Controller/SalesController.php	/^			$rate = 0;$/;"	v
+re	Model/Db.php	/^			$re = $this->db->fetchOne($sql);$/;"	v
+receivePurchaseAction	Controller/PurchasesController.php	/^	public function receivePurchaseAction()$/;"	f
+records	Controller/ReportsController.php	/^				$records = $this->db->reportPurchases($form->fromDate, $form->toDate);$/;"	v
+records	Controller/ReportsController.php	/^				$records = $this->db->reportSales($form->fromDate, $form->toDate);$/;"	v
+removeCoupon	Model/Db.php	/^	public function removeCoupon($code)$/;"	f
+removeCouponAction	Controller/DiscountsController.php	/^	public function removeCouponAction()$/;"	f
+removeItemFromSeasonal	Model/Db.php	/^	public function removeItemFromSeasonal($sid, $code)$/;"	f
+removeItemFromSeasonalAction	Controller/DiscountsController.php	/^	public function removeItemFromSeasonalAction()$/;"	f
+removeSeasonal	Model/Db.php	/^	public function removeSeasonal($sid)$/;"	f
+removeSeasonalAction	Controller/DiscountsController.php	/^	public function removeSeasonalAction()$/;"	f
+render	MySmartyZend.php	/^	public function render($tpl)$/;"	f
+reportPurchases	Model/Db.php	/^	public function reportPurchases(Zend_Date $from, Zend_Date $to)$/;"	f
+reportPurchasesAction	Controller/ReportsController.php	/^	public function reportPurchasesAction()$/;"	f
+reportSales	Model/Db.php	/^	public function reportSales(Zend_Date $from, Zend_Date $to)$/;"	f
+reportSalesAction	Controller/ReportsController.php	/^	public function reportSalesAction()$/;"	f
+represents	Model/Item.php	/^ * This class represents an item object.$/;"	c
+represents	Model/Vendor.php	/^ * This class represents a vendor object.$/;"	c
+request	Controller/DiscountsController.php	/^		$request = $this->getRequest();$/;"	v
+request	Controller/ErrorController.php	/^    	$request = $this->getRequest();$/;"	v
+request	Controller/InventoryController.php	/^		$request = $this->getRequest();$/;"	v
+request	Controller/PurchasesController.php	/^		$request = $this->getRequest();$/;"	v
+request	Controller/ReportsController.php	/^		$request = $this->getRequest();$/;"	v
+request	Controller/SalesController.php	/^		$request = $this->getRequest();$/;"	v
+request	Controller/VendorsController.php	/^		$request = $this->getRequest();$/;"	v
+request	MySmartyZend/plugins/function.geturl.php	/^		$request = Zend_Controller_Front::getInstance()->getRequest();$/;"	v
+result	Model/Db.php	/^		$result = $this->db->fetchAll($select);$/;"	v
+result	Model/Db.php	/^		$result = $this->db->fetchAll($sql);$/;"	v
+result	Model/Db.php	/^		$result = $this->db->fetchCol($sql);$/;"	v
+result	Model/Db.php	/^		$result = $this->getCoupons($cond);$/;"	v
+result	Model/Db.php	/^		$result = $this->getSeasonals($cond);$/;"	v
+ret	Model/Db.php	/^		$ret = $this->getSeasonals($cond);$/;"	v
+ret	Model/Db.php	/^		$ret = array();$/;"	v
+route	MySmartyZend/plugins/function.geturl.php	/^	$route = isset($params['route']) ? $params['route'] : null;$/;"	v
+sale	Model/Db.php	/^				$sale = new Model_Sale();$/;"	v
+sales	Controller/SalesController.php	/^				$sales = $this->db->getSalesWithinDates($form->fromDate, $form->toDate);$/;"	v
+searchAction	Controller/InventoryController.php	/^	public function searchAction()$/;"	f
+seasonal	Controller/DiscountsController.php	/^				$seasonal = new Model_Seasonal();$/;"	v
+seasonal	Controller/DiscountsController.php	/^			$seasonal = $this->db->getSeasonal($sid);$/;"	v
+seasonal	Controller/SalesController.php	/^						$seasonal = $this->db->getSeasonalByItemCodeAndDate($itemCode, $bill->date);$/;"	v
+seasonal	Controller/SalesController.php	/^				$seasonal = $this->db->getSeasonalByItemCodeAndDate($itemCode, $date);$/;"	v
+seasonal	Model/Db.php	/^				$seasonal = new Model_Seasonal();$/;"	v
+section	View/header.phtml	/^								{if $section == 'home'}src="\/images\/home_a.jpg" class="active"$/;"	v
+section	View/header.phtml	/^								{if $section == 'inventory'}src="\/images\/inventory_a.jpg" class="active"$/;"	v
+section	View/header.phtml	/^								{if $section == 'purchases'}src="\/images\/purchases_a.jpg" class="active"$/;"	v
+section	View/header.phtml	/^								{if $section == 'reporst'}src="\/images\/reports_a.jpg" class="active"$/;"	v
+section	View/header.phtml	/^								{if $section == 'sales'}src="\/images\/sales_a.jpg" class="active"$/;"	v
+section	View/header.phtml	/^								{if $section == 'vendors'}src="\/images\/vendors_a.jpg" class="active"$/;"	v
+select	Model/Db.php	/^		$select = $this->db->select()$/;"	v
+select	MySmartyZend/plugins/function.usstateoption.php	/^	$select = sprintf('<select name="%s"', $param['name']);$/;"	v
+selectedItems	Model/Form/Discounts/AddSeasonal.php	/^			if (!is_array($selectedItems))	$selectedItems = array($selectedItems);$/;"	v
+selectedItems	Model/Form/Discounts/AddSeasonal.php	/^		$selectedItems = $request->getPost('seasonal_items');$/;"	v
+sendJSON	MyControllerAction.php	/^	public function sendJSON($data, $encoded = true)$/;"	f
+setPurchaseArrived	Model/Db.php	/^	public function setPurchaseArrived($pid)$/;"	f
+setRedirect	MyControllerAction.php	/^	public function setRedirect($wait, $url)$/;"	f
+setValidateOnly	Model/Form.php	/^	public function setValidateOnly($flag)$/;"	f
+sid	Controller/DiscountsController.php	/^				$sid = $this->db->addSeasonal($seasonal);$/;"	v
+sid	Controller/DiscountsController.php	/^			$sid = (int) $request->getPost('sid');$/;"	v
+sid	Model/Db.php	/^				$sid = $row->sid;$/;"	v
+sid	Model/Db.php	/^		$sid = $this->db->lastInsertId();$/;"	v
+sid	Model/Db.php	/^		$sid = -1;$/;"	v
+smarty_function_geturl	MySmartyZend/plugins/function.geturl.php	/^function smarty_function_geturl($params, $smarty)$/;"	f
+smarty_function_redirect	MySmartyZend/plugins/function.redirect.php	/^function smarty_function_redirect($params, $smarty)$/;"	f
+smarty_function_sitenav	MySmartyZend/plugins/function.sitenav.php	/^function smarty_function_sitenav($params, $smarty)$/;"	f
+smarty_function_usstateoption	MySmartyZend/plugins/function.usstateoption.php	/^function smarty_function_usstateoption($param, $smarty)$/;"	f
+sql	Model/Db.php	/^			$sql = $this->db->quoteInto($sql, $row->item_code);$/;"	v
+sql	Model/Db.php	/^			$sql = $this->db->quoteInto('SELECT qty FROM Items WHERE item_code = ?', $item->itemCode);$/;"	v
+sql	Model/Db.php	/^			$sql = 'SELECT qty FROM Items WHERE item_code = ?';$/;"	v
+sql	Model/Db.php	/^		$sql = $this->db->quoteInto($sql, $code);$/;"	v
+sql	Model/Db.php	/^		$sql = $this->db->quoteInto($sql, strtoupper($code));$/;"	v
+sql	Model/Db.php	/^		$sql = $this->db->quoteInto('SELECT qty FROM Items WHERE item_code = ?', $code);$/;"	v
+sql	Model/Db.php	/^		$sql = $this->db->quoteInto('SELECT vid FROM Vendors WHERE phone = ?', $phone);$/;"	v
+sql	Model/Db.php	/^		$sql = 'SELECT COUNT(coupon_code) FROM Coupons WHERE coupon_code = ?';$/;"	v
+sql	Model/Db.php	/^		$sql = 'SELECT COUNT(item_code) FROM Items WHERE item_code = ?';$/;"	v
+sql	Model/Db.php	/^		$sql = 'SELECT COUNT(sid) FROM Seasonals_Items WHERE sid = %d AND item_code = ?';$/;"	v
+sql	Model/Db.php	/^		$sql = 'SELECT item_code FROM Items ORDER BY item_code ASC';$/;"	v
+sql	Model/Db.php	/^		$sql = 'SELECT item_code, name, qty, s_uprice FROM Items ORDER BY item_code ASC';$/;"	v
+sql	Model/Db.php	/^		$sql = 'SELECT item_code, qty FROM Purchases_Items WHERE pid = ' . $pid;$/;"	v
+sql	Model/Db.php	/^		$sql = 'SELECT s_uprice FROM Items WHERE item_code = ?';$/;"	v
+sql	Model/Db.php	/^		$sql = sprintf($sql, $vid);$/;"	v
+sql	Model/Db.php	/^		$sql = sprintf($this->db->quoteInto($sql, $code), $sid);$/;"	v
+sql	Model/Db.php	/^		$sql = sprintf('SELECT v_uprice FROM Vendors_Items ' .$/;"	v
+sql	Model/Db.php	/^		$sql =$/;"	v
+sqlDate	Model/Db.php	/^		$sqlDate = $date->toString(Model_Db::SQL_DATE_ZFMT);$/;"	v
+states	MySmartyZend/plugins/function.usstateoption.php	/^	$states = array('AL', 'AK', 'AZ', 'AR', 'CA', 'CO', 'CT', 'DE', 'FL', 'GA',$/;"	v
+status	Model/Coupon.php	/^		$status = $this->getStatus();$/;"	v
+status	Model/Discount.php	/^		$status = $this->getStatus();$/;"	v
+status	Model/Discount.php	/^		return $status == Model_Discount::COMING;$/;"	v
+step	MySmartyZend/plugins/function.sitenav.php	/^		$step = $params['trail'][$i];$/;"	v
+subTotal	Model/Purchase.php	/^		$subTotal = $this->getSubTotal();$/;"	v
+subTotal	Model/Sale.php	/^		$subTotal = $this->getSubTotal();$/;"	v
+subtotal	Controller/ReportsController.php	/^				$subtotal = 0;$/;"	v
+sum	Model/Purchase.php	/^		$sum = 0.0;$/;"	v
+sum	Model/Sale.php	/^		$sum = 0.0;$/;"	v
+suppliedItems	Controller/VendorsController.php	/^					$suppliedItems = array();$/;"	v
+tax	Controller/ReportsController.php	/^				$tax = 5.5;$/;"	v
+tmp	Model/Form/Discounts/AddSeasonal.php	/^			$tmp = array();$/;"	v
+tmp	Model/Form/Purchases/PlaceOrder.php	/^		$tmp = $request->getPost('item_codes');$/;"	v
+tmp	Model/Form/Sales/CreateBill.php	/^		$tmp = $request->getPost('item_codes');$/;"	v
+tmp	Model/Form/Vendor.php	/^			$tmp = $request->getPost('item_codes');$/;"	v
+tmp	Model/Form/Vendor.php	/^			$tmp = $request->getPost('item_names');$/;"	v
+tmp	Model/Form/Vendor.php	/^			$tmp = $request->getPost('v_uprices');$/;"	v
+tmp	Model/Form/Vendor.php	/^		$tmp = $request->getPost('item_codes');$/;"	v
+to	Model/Form.php	/^ * An abstract class to process forms. It will hold data submitted for validation$/;"	c
+toDate	Model/Db.php	/^		$toDate = $toDate->toString(Model_Db::SQL_DATE_ZFMT);$/;"	v
+toDate	Model/Form/Discounts/AddCoupon.php	/^			$toDate = new Zend_Date($toDate, 'MMM dd, yyyy');$/;"	v
+toDate	Model/Form/Discounts/AddCoupon.php	/^		$toDate = $request->getPost('to_date');$/;"	v
+toDate	Model/Form/Discounts/AddSeasonal.php	/^			$toDate = new Zend_Date($toDate, 'MMM dd, yyyy');$/;"	v
+toDate	Model/Form/Discounts/AddSeasonal.php	/^		$toDate = $request->getPost('seasonal_to_date');$/;"	v
+toDate	Model/Form/Purchases/GetReceived.php	/^			$toDate = $request->getPost('to_date');$/;"	v
+toDate	Model/Form/Purchases/GetReceived.php	/^		$toDate = trim($request->getPost('to_date'));$/;"	v
+toDate	Model/Form/Reports.php	/^			$toDate = $request->getPost('to_date');$/;"	v
+toDate	Model/Form/Reports.php	/^		$toDate = trim($request->getPost('to_date'));$/;"	v
+toDate	Model/Form/Sales/ViewSales.php	/^			$toDate = $request->getPost('to_date');$/;"	v
+toDate	Model/Form/Sales/ViewSales.php	/^		$toDate = trim($request->getPost('to_date'));$/;"	v
+today	Controller/DiscountsController.php	/^			$today = Zend_Date::now();$/;"	v
+today	Model/Discount.php	/^		$today = Zend_Date::now();$/;"	v
+updateCouponDateAction	Controller/DiscountsController.php	/^	public function updateCouponDateAction()$/;"	f
+updateCouponFromDate	Model/Db.php	/^	public function updateCouponFromDate($code, $date)$/;"	f
+updateCouponItem	Model/Db.php	/^	public function updateCouponItem($couponCode, $itemCode)$/;"	f
+updateCouponItemAction	Controller/DiscountsController.php	/^	public function updateCouponItemAction()$/;"	f
+updateCouponRate	Model/Db.php	/^	public function updateCouponRate($code, $rate)$/;"	f
+updateCouponRateAction	Controller/DiscountsController.php	/^	public function updateCouponRateAction()$/;"	f
+updateCouponToDate	Model/Db.php	/^	public function updateCouponToDate($code, $date)$/;"	f
+updateItemName	Model/Db.php	/^	public function updateItemName($code, $name)$/;"	f
+updateItemNameAction	Controller/InventoryController.php	/^	public function updateItemNameAction()$/;"	f
+updateItemUPrice	Model/Db.php	/^	public function updateItemUPrice($code, $price)$/;"	f
+updateItemUPriceAction	Controller/InventoryController.php	/^	public function updateItemUPriceAction()$/;"	f
+updateSeasonalDateAction	Controller/DiscountsController.php	/^	public function updateSeasonalDateAction()$/;"	f
+updateSeasonalFromDate	Model/Db.php	/^	public function updateSeasonalFromDate($sid, $date)$/;"	f
+updateSeasonalName	Model/Db.php	/^	public function updateSeasonalName($sid, $name)$/;"	f
+updateSeasonalNameAction	Controller/DiscountsController.php	/^	public function updateSeasonalNameAction()$/;"	f
+updateSeasonalRate	Model/Db.php	/^	public function updateSeasonalRate($sid, $rate)$/;"	f
+updateSeasonalRateAction	Controller/DiscountsController.php	/^	public function updateSeasonalRateAction()$/;"	f
+updateSeasonalToDate	Model/Db.php	/^	public function updateSeasonalToDate($sid, $date)$/;"	f
+uri	Controller/ErrorController.php	/^    	$uri = $request->getRequestUri();$/;"	v
+url	MyControllerAction.php	/^		$url = rtrim($this->getRequest()->getBaseUrl(), '\/');\/\/ . '\/';$/;"	v
+url	MySmartyZend/plugins/function.geturl.php	/^		$url = $helper->url($params, $route);$/;"	v
+url	MySmartyZend/plugins/function.geturl.php	/^		$url = rtrim($request->getBaseUrl(), '\/');\/\/ . '\/';$/;"	v
+url	MySmartyZend/plugins/function.geturl.php	/^	if (isset($params['domain'])) { $url = $params['domain'] . $url; }$/;"	v
+usedItemCodes	Controller/PurchasesController.php	/^						$usedItemCodes = array();$/;"	v
+usedItemCodes	Controller/SalesController.php	/^				$usedItemCodes = array();$/;"	v
+usedItemCodes	Controller/VendorsController.php	/^					$usedItemCodes = array();$/;"	v
+v	Model/Db.php	/^				$v = new Model_Vendor();$/;"	v
+v	Model/Db.php	/^		$v = new Model_Vendor();$/;"	v
+val	MySmartyZend.php	/^	public function assign($spec, $val = null)$/;"	v
+vendor	Controller/InventoryController.php	/^			$vendor = $this->db->getItemsByVendor($vid);$/;"	v
+vendor	Controller/PurchasesController.php	/^				$vendor = $this->db->getVendor((int) $form->vid);$/;"	v
+vendor	Controller/VendorsController.php	/^					$vendor = new Model_Vendor();$/;"	v
+vendor	Model/Db.php	/^				$vendor = new Model_Vendor();$/;"	v
+vendor	Model/Db.php	/^		$vendor = new Model_Vendor();$/;"	v
+vendors	Controller/InventoryController.php	/^		$vendors = $this->db->getVendors();$/;"	v
+vendors	Controller/VendorsController.php	/^		$vendors = $this->db->getVendors();$/;"	v
+vendors	Model/Db.php	/^		$vendors = $this->getVendors($cond);$/;"	v
+vendors	Model/Db.php	/^		$vendors = array();$/;"	v
+vid	Controller/InventoryController.php	/^			$vid = (int) $request->getPost('vid');$/;"	v
+vid	Controller/PurchasesController.php	/^			$vid = (int) $request->getPost('vid');$/;"	v
+vid	Model/Db.php	/^				$vid = $row['vid'];$/;"	v
+vid	Model/Db.php	/^		$vid = $this->db->lastInsertId();$/;"	v
+vid	Model/Db.php	/^		$vid = -1;$/;"	v
+wrong	Model/Form/Discounts/AddCoupon.php	/^				$wrong = true;$/;"	v
+wrong	Model/Form/Discounts/AddCoupon.php	/^			$wrong = true;$/;"	v
+wrong	Model/Form/Discounts/AddCoupon.php	/^		$wrong = false;$/;"	v
+wrong	Model/Form/Discounts/AddSeasonal.php	/^				$wrong = true;$/;"	v
+wrong	Model/Form/Discounts/AddSeasonal.php	/^			$wrong = true;$/;"	v
+wrong	Model/Form/Discounts/AddSeasonal.php	/^		$wrong = false;$/;"	v
+wrong	Model/Form/Purchases/GetReceived.php	/^				$wrong = true;$/;"	v
+wrong	Model/Form/Purchases/GetReceived.php	/^			$wrong = true;$/;"	v
+wrong	Model/Form/Purchases/GetReceived.php	/^		$wrong = false;$/;"	v
+wrong	Model/Form/Purchases/PlaceOrder.php	/^			$wrong = true;$/;"	v
+wrong	Model/Form/Purchases/PlaceOrder.php	/^		$wrong = false;$/;"	v
+wrong	Model/Form/Reports.php	/^				$wrong = true;$/;"	v
+wrong	Model/Form/Reports.php	/^			$wrong = true;$/;"	v
+wrong	Model/Form/Reports.php	/^		$wrong = false;$/;"	v
+wrong	Model/Form/Sales/CreateBill.php	/^			$wrong = true;$/;"	v
+wrong	Model/Form/Sales/CreateBill.php	/^		$wrong = false;$/;"	v
+wrong	Model/Form/Sales/ViewSales.php	/^				$wrong = true;$/;"	v
+wrong	Model/Form/Sales/ViewSales.php	/^			$wrong = true;$/;"	v
+wrong	Model/Form/Sales/ViewSales.php	/^		$wrong = false;$/;"	v

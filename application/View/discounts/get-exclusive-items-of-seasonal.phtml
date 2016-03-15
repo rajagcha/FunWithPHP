@@ -1,0 +1,6 @@
+<select id="exclusive-item">
+	{foreach from=$itemCodes item=code}
+	<option value="{$code|escape}">{$code|escape}</option>
+	{/foreach}
+</select>
+<input type="hidden" id="hidden-sid" value="{$sid}" />

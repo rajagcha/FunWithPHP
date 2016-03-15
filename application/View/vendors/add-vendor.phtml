@@ -1,0 +1,84 @@
+<div>
+	<form method="POST" action="{geturl action="add-vendor"}" id="add-vendor-form">
+		<div class="error" style="display:none" id="add-vendor-error">
+			<strong>There is an error with submitted data.</strong>
+			<ul>
+			</ul>
+		</div>
+		<fieldset>
+			<legend>Vendor Information</legend>
+			<div class="columns">
+				<div class="column1">
+					<div class="row">
+						Name:<br />
+						<input type="text" class="input" name="name" style="width: 80%" />
+					</div>
+				</div>
+				<div class="column2">
+					<div class="row">
+						Phone:<br />
+						<input type="text" class="input" name="phone" size="10" maxlength="10" style="width: 120px" />
+					</div>
+				</div>
+			</div>
+			<div class="clear"></div>
+			<div class="row">
+				Address:<br />
+				<input type="text" class="input" name="address" style="width: 70%" />
+			</div>
+			<div class="columns">
+				<div class="column1 report">
+					<div class="row">
+						City:<br />
+						<input type="text" class="input" name="city" />
+					</div>
+				</div>
+				<div class="column2 report">
+					<div class="row">
+						State:<br />
+						{usstateoption name='state'}
+					</div>
+				</div>
+				<div class="column3">
+					<div class="row">
+						Zip:<br />
+						<input type="text" class="input" name="zip" size="5" maxlength="5" style="width: 50px;" />
+					</div>
+				</div>
+			</div>
+			<div class="clear"></div>
+		</fieldset>
+		<fieldset>
+			<legend>Supplied Items</legend>
+			<table class="report">
+				<thead>
+					<tr>
+						<th><img id="add-item" src="/images/item_add.png" title="Add new item" style="cursor: pointer" /></th>
+						<th>Item Code</th>
+						<th>Item Name</th>
+						<th class="textright">Vendor Unit Price</th>
+					</tr>
+				</thead>
+				<tfoot>
+					<tr>
+						<td colspan="4"> </td>
+					</tr>
+				</tfoot>
+				<tbody id="item-list">
+
+				</tbody>
+			</table>
+			<!-- info dialog -->
+			<div id="vendor-message" title="New Vendor Added">
+				<p><span class="ui-icon ui-icon-circle-check"
+						style="float:left; margin:0 7px 50px 0;"></span>
+					A new vendor and the supplied items are added to the system.
+				</p>
+			</div>
+		</fieldset>
+		<div class="row">
+			<input type="button" class="input submit" value="Add Vendor" id="add-vendor" />
+			<input type="reset" class="input submit" value="Reset Form" id="reset-form" />
+		</div>
+	</form>
+</div>

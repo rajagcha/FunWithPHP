@@ -1,0 +1,43 @@
+{if isset($error)}
+<div class="error">
+	<strong>{$error}</strong>
+</div>
+{elseif $vendors|@count}
+<table class="group">
+	{foreach from=$vendors item=vendor}
+	<tr>
+		<td>
+			<span style="font-size:1.2em">* {$vendor->name|escape}</span><br />
+			<div>
+				<table class="report">
+					<thead>
+					<tr>
+						<th>Item Code</th>
+						<th>Item Name</th>
+						<th class="textright">Qty in Stock</th>
+						<th class="textright">Vendor Unit Price</th>
+						<th class="textright">Store Unit Price</th>
+					</tr>
+					</thead>
+					<tfoot>
+					</tfoot>
+					<tbody>
+					{foreach from=$vendor->suppliedItems item=item}
+					<tr>
+						<td>{$item->itemCode|escape}</td>
+						<td>{$item->name|escape}</td>
+						<td class="textright">{$item->qty|escape}</td>
+						<td class="textright">${$item->vUPrice|string_format:'%.2f'}</td>
+						<td class="textright">${$item->sUPrice|string_format:'%.2f'}</td>
+					</tr>
+					{/foreach}
+					</tbody>
+				</table>
+			</div>
+		</td>
+	</tr><!-- END one vendor -->
+	{/foreach}
+</table>
+{else}
+<p><strong>No such an item in store.</strong></p>
+{/if}

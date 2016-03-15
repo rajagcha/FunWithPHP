@@ -1,0 +1,7 @@
+<div class="error" {if $error|@count == 0}style="display:none"{/if}>
+	<ul>
+		{foreach from=$error item=item}
+			<li>{$item|escape}</li>
+		{/foreach}
+	</ul>
+</div>

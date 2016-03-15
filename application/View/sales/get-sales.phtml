@@ -1,0 +1,66 @@
+{if isset($errors)}
+<div class="error">
+	<ul>
+	{foreach from=$errors item=err}
+		<li>{$err}</li>
+	{/foreach}
+	</ul>
+</div>
+{elseif $sales|@count}
+{foreach from=$sales item=bill}
+	<div>
+		<strong>Sale ID:</strong> {$bill->sid}<br />
+		<strong>Date:</strong> {$bill->date->toString('MMM dd, yyyy')}
+	</div>
+	<div class="clear"></div>
+	<table class="report">
+		<thead>
+		<tr>
+			<th>Item Code</th>
+			<th>Item Name</th>
+			<th class="textright">Qty</th>
+			<th class="textright">Coupon off</th>
+			<th class="textright">Seasonal off</th>
+			<th class="textright">Unit Price</th>
+			<th class="textright">Final Price</th>
+		</tr>
+		</thead>
+		<tfoot>
+				<tr>
+					<td colspan="6" class="textright">Sub-total:</td>
+					<td class="textright">{$bill->getSubTotal()|string_format:'%.2f'}</td>
+				</tr>
+				<tr>
+					<td colspan="6" class="textright">Tax (%):</td>
+					<td class="textright">{$bill->tax|string_format:'%.2f'}</td>
+				</tr>
+				<tr>
+					<td colspan="6" class="textright">Total:</td>
+					<td class="textright">{$bill->getTotal()|string_format:'%.2f'}</td>
+				</tr>
+			</tfoot>
+		<tbody>
+		{foreach from=$bill->items item=item}
+		<tr>
+			<td>{$item->itemCode|escape}</td>
+			<td>{$item->name|escape}</td>
+			<td class="textright">{$item->qty}</td>
+			<td class="textright">
+				{if $item->coupon != null}
+				<span title="Code: {$item->coupon->code|escape}">{$item->coupon->rate|string_format:'%.2f'}</span>{else}0.00{/if}%
+			</td>
+			<td class="textright">
+				{if $item->seasonal != null}
+				<span title="Seasonal: {$item->seasonal->name|escape}">{$item->seasonal->rate|string_format:'%.2f'}</span>
+				{else}0.00{/if}%
+			</td>
+			<td class="textright">{$item->sUPrice|string_format:'%.2f'}</td>
+			<td class="textright">{$item->computeStoreFinalPrice()|string_format:'%.2f'}</td>
+		</tr>
+		{/foreach}
+		</tbody>
+	</table>
+{/foreach}
+{else}
+<p><strong>No sales between the given dates.</strong></p>
+{/if}

@@ -1,0 +1,36 @@
+<div class="error" style="display:none" id="seasonal-error-box">
+	<strong>There is an error with submitted data.</strong>
+</div>
+<form id="form-add-seasonal" class="add-coupon">
+<div class="columns">
+	<div class="column1">
+		<div class="row">
+			<label for="seasonal-name">Seasonal name:</label>
+			<input type="text" class="input" name="seasonal_name" id="seasonal-name" />
+		</div>
+		<div class="row">
+			<label for="seasonal-rate">Discount rate (%):</label>
+			<input type="text" class="input short" name="seasonal_rate" id="seasonal-rate" />
+		</div>
+		<div class="row">
+			<label for="seasonal-from-date">Available from:</label>
+			<input type="text" class="input" name="seasonal_from_date" id="seasonal-from-date" readonly="readonly" />
+		</div>
+		<div class="row">
+			<label for="seasonal-to-date">To:</label>
+			<input type="text" class="input" name="seasonal_to_date" id="seasonal-to-date" readonly="readonly" />
+		</div>
+	</div>
+	<div class="column2">
+		Selected items:<br />
+		<select name="seasonal_items[]" id="seasonal-items" multiple="multiple" size="8">
+			{foreach from=$itemCodes item=code}
+			<option value="{$code|escape}">{$code|escape}</option>
+			{/foreach}
+		</select><br /><br />
+		<input type="reset" value="Reset Form" id="reset-seasonal-form" />
+		<input type="button" value="Add Seasonal" id="add-seasonal" />
+	</div>
+</div>
+</form>
+<div class="clear"></div>

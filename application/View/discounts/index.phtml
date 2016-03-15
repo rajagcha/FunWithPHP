@@ -1,0 +1,55 @@
+{include file='header.phtml' section='discounts'}
+<script type="text/javascript" src="/js/libs/jquery.jeditable.min.js"></script>
+<script type="text/javascript" src="/js/libs/jquery.tinysort.min.js"></script>
+<script type="text/javascript">
+	var jsonItemCodes = {$jsonItemCodes};
+</script>
+<script type="text/javascript" src="/js/discounts.js"></script>
+<div id="tabs">
+	<ul>
+		<li><a href="#tabs-coupons">Coupons</a></li>
+		<li><a href="#tabs-seasonal">Seasonal</a></li>
+	</ul>
+	<div id="tabs-coupons">
+		<div id="dialog-add-coupon" title="Add New Coupon">
+		{include file='discounts/form-add-coupon.phtml' itemCodes=$itemCodes}
+		</div>
+		<table class="report">
+			<thead>
+				<tr>
+					<th><img id="add-item" src="/images/item_add.png" title="Add new coupon" class="link" /></th>
+					<th><span id="sort-coupon" class="link">Coupon Code</span></th>
+					<th><span id="sort-item" class="link">Item Code</span></th>
+					<th class="textright">Rate (%)</th>
+					<th>From</th>
+					<th>To</th>
+					<th><span id="sort-status" class="link">Status</span></th>
+				</tr>
+			</thead>
+			<tfoot></tfoot>
+			<tbody id="tbody-coupons">
+				{foreach from=$coupons item=coupon}
+				{include file='discounts/get-coupon.phtml coupon=$coupon}
+				{/foreach}
+			</tbody>
+		</table>
+	</div>
+	<div id="tabs-seasonal">
+		<div id="accordion">
+			<h3><a href="#">Add New Seasonal Discount</a></h3>
+			<div>
+			{include file='discounts/add-seasonal.phtml' itemCodes=$itemCodes}
+			</div>
+			<h3 id="header-load-seasonals"><a href="#">View Seasonal Discounts</a></h3>
+			<div id="load-seasonals">
+				{include file='discounts/get-seasonals.phtml' seasonals=$seasonals}
+			</div>
+		</div>
+		<!-- Add seasonal info -->
+		<div id="add-seasonal-dialog" title="Confirmation">
+			<p><span class="ui-icon ui-icon-circle-check" style="float:left; margin:0 7px 50px 0;"></span>
+				A new seasonal discount has been added.</p>
+		</div>
+	</div>
+</div>
+{include file='footer.phtml'}

@@ -1,0 +1,84 @@
+{include file='header.phtml' section='sales'}
+<script type="text/javascript">
+var itemCodes = new Array();
+{foreach from=$itemCodes item=code}
+	itemCodes.push("{$code|escape}");
+{/foreach}
+</script>
+<script type="text/javascript" src="/js/sales.js"></script>
+<div id="accordion">
+	<p><a href="#"><strong>Create Bill</strong></a></p>
+	<div>
+		<div class="error" style="display:none" id="bill-error-box">
+			<strong>There is an error with submitted data.</strong>
+		</div>
+		<form id="form-create-bill">
+			<div class="row">
+				Date:<br />
+				<input type="text" id="bill-date" readonly="readonly" name="date" /><br />
+			</div>
+			<table class="report">
+				<thead>
+					<tr>
+						<th><img id="add-item" src="/images/item_add.png" title="Add new item to bill" style="cursor: pointer" /></th>
+						<th>Item Code</th>
+						<th class="textright">Qty</th>
+						<th>Coupon</th>
+						<th>Coupon Off (%)</th>
+						<th>Seasonal Off (%)</th>
+						<th class="textright">Unit Price</th>
+						<th class="textright">Final Price</th>
+					</tr>
+				</thead>
+				<tfoot>
+					<tr>
+						<td colspan="7" class="textright">Sub-total:</td>
+						<td class="textright"><span id="sub-total">0.00</span></td>
+					</tr>
+					<tr>
+						<td colspan="7" class="textright">Tax (%):</td>
+						<td class="textright">
+							<input class="input short fromright" readonly="readonly" type="text" name="tax" value="5.5" id="tax" />
+						</td>
+					</tr>
+					<tr>
+						<td colspan="7" class="textright">Total:</td>
+						<td class="textright" id="total"><span id="total">0.00</span></td>
+					</tr>
+					<tr>
+						<td colspan="8" class="textright">
+							<input type="reset" class="input submit" value="Reset Form" id="reset-form" />
+							<input type="button" class="input submit" value="Create Bill" id="submit" />
+						</td>
+					</tr>
+				</tfoot>
+				<tbody id="item-list">
+				</tbody>
+			</table>
+			<!-- info dialog -->
+			<div id="bill-message" title="Bill Created">
+				<p><span class="ui-icon ui-icon-circle-check" style="float:left; margin:0 7px 50px 0;"></span>A new bill has been created.</p>
+			</div>
+		</form>
+	</div>
+	<p><a href="#"><strong>View Bills</strong></a></p>
+	<div>
+		<form id="form-view-sales">
+		<div class="columns">
+			<div class="column1 report">
+				From:<br /><input type="text" name="from_date" class="input" id="date-from" readonly="readonly" />
+			</div>
+			<div class="column2 report">
+				To:<br /><input type="text" name="to_date" class="input" id="date-to" readonly="readonly" />
+			</div>
+			<div class="column3">
+				<br /><input type="button" class="input submit" value="Show" id="button" />
+			</div>
+		</div>
+		</form>
+		<div class="clear"><br /></div>
+		<div id="result-sales-management"></div>
+	</div>
+</div><!-- END accordion -->
+<div class="clear"></div>
+{include file='footer.phtml'}

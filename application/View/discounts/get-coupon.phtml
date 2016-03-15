@@ -1,0 +1,31 @@
+{if $coupon != null}
+<tr id="{$coupon->code|escape}">
+	<td abbr="{$coupon->code|escape}">
+		{if $coupon->isRemovable()}<img src="/images/item_remove.png" title="Remove this coupon" class="link" />{/if}
+	</td>
+	<td abbr="{$coupon->code|escape}">{$coupon->code|escape}</td>
+	<td abbr="{$coupon->item->itemCode|escape}">{if $coupon->isEditable()}
+		<span class="edititem {$coupon->code|escape}">{$coupon->item->itemCode|escape}</span>
+		{else}
+		{$coupon->item->itemCode|escape}
+		{/if}
+	</td>
+	<td class="textright">{if $coupon->isEditable()}
+		<span class="editrate {$coupon->code|escape}">{$coupon->rate|string_format:'%.2f'}</span>
+		{else}
+		{$coupon->rate|string_format:'%.2f'}
+		{/if}</td>
+	<td>{if $coupon->isEditable()}
+		<input type="text" id="from-date-{$coupon->code|escape}" readonly="readonly" value="{$coupon->fromDate->toString('MMM dd, yyyy')}" />
+		{else}
+		{$coupon->fromDate->toString('MMM dd, yyyy')}
+		{/if}
+	</td>
+	<td>{if $coupon->isEditable()}
+		<input type="text" id="to-date-{$coupon->code|escape}" readonly="readonly" value="{$coupon->toDate->toString('MMM dd, yyyy')}" />
+		{else}
+		{$coupon->toDate->toString('MMM dd, yyyy')}</td>
+		{/if}
+	<td abbr="{$coupon->getStatus()|escape}">{$coupon->getStatus()|escape}</td>
+</tr>
+{/if}

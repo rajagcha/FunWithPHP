@@ -1,0 +1,9 @@
+{foreach from=$vendor->suppliedItems item=item}
+<tr>
+	<td>{$item->itemCode|escape}</td>
+	<td>{$item->name|escape}</td>
+	<td class="textright">{$item->qty|escape}</td>
+	<td class="textright">${$item->vUPrice|escape|string_format:'%.2f'}</td>
+	<td class="textright">${$item->sUPrice|escape|string_format:'%.2f'}</td>
+</tr>
+{/foreach}

@@ -1,0 +1,63 @@
+{if isset($errors)}
+<div class="error">
+	<ul>
+	{foreach from=$errors item=err}
+		<li>{$err}</li>
+	{/foreach}
+	</ul>
+</div>
+{elseif $purchases|@count}
+	{foreach from=$purchases item=purchase}
+	<div class="columns">
+		<div class="column1">
+			<strong>Order ID:</strong> {$purchase->pid}<br />
+			<strong>Date:</strong> {$purchase->date->toString('MMM dd, yyyy')}
+		</div>
+		<div class="column2">
+			<strong>Vendor:</strong> {$purchase->vendor->name|escape}
+		</div>
+	</div>
+	<div class="clear"></div>
+	<table class="report">
+		<thead>
+		<tr>
+			<th>Item Code</th>
+			<th>Item Name</th>
+			<th class="textright">Store Unit Price</th>
+			<th class="textright">Qty</th>
+			<th class="textright">Vendor Unit Price</th>
+			<th class="textright">Final Price</th>
+		</tr>
+		</thead>
+		<tfoot>
+				<tr>
+					<td colspan="5" class="textright">Sub-total:</td>
+					<td class="textright">{$purchase->getSubTotal()|string_format:'%.2f'}</td>
+				</tr>
+				<tr>
+					<td colspan="5" class="textright">Tax (%):</td>
+					<td class="textright">{$purchase->tax|string_format:'%.2f'}</td>
+				</tr>
+				<tr>
+					<td colspan="5" class="textright">Total:</td>
+					<td class="textright">{$purchase->getTotal()|string_format:'%.2f'}</td>
+				</tr>
+			</tfoot>
+		<tbody>
+		{foreach from=$purchase->items item=item}
+		<tr>
+			<td>{$item->itemCode|escape}</td>
+			<td>{$item->name|escape}</td>
+			<td class="textright">${$item->sUPrice|string_format:'%.2f'}</td>
+			<td class="textright">{$item->qty}</td>
+			<td class="textright">${$item->vUPrice|string_format:'%.2f'}</td>
+			<td class="textright">${$item->qty*$item->vUPrice|string_format:'%.2f'}</td>
+		</tr>
+		{/foreach}
+		</tbody>
+	</table>
+	<br />
+	{/foreach}
+{else}
+<p><strong>No orders between the given dates.</strong></p>
+{/if}
